@@ -186,7 +186,7 @@ class App extends Component {
                 </div> : null 
               }
             </div> 
-            <div className = "row p-0 m-0" style = {{height: '10%'}}> 
+            <div className = "row pt-3 m-0" style = {{height: '10%'}}> 
               <div className = "col-1"/> 
               <div className = "col-9" style = {{display: 'flex', justifyContent: 'space-around', fontSize: 14}}>  
                 {this.state[this.state.view].map((point, key) => (
@@ -194,7 +194,7 @@ class App extends Component {
                     {this.state.view === "realTime" ?
                       point.time.getMinutes() % 5 === 0 ? 
                         <p> {point.time.getHours()}:{point.time.getMinutes() < 10 ? 
-                          point.time.getMinutes() + '0' : point.time.getMinutes()} </p>  
+                          '0' + point.time.getMinutes() : point.time.getMinutes()} </p>  
                         : null 
                       :
                       <p> {point.time.split('T')[0].split('-')[1] + '/' + point.time.split('T')[0].split('-')[2]} </p> 

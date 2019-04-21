@@ -21,7 +21,7 @@ export default class ChartElement extends Component {
                 <div style = {{
                     height: `${((point.q3 - point.q1)/(point.high - point.low)*100)}%`,
                     width: 7, 
-                    background: 'green',
+                    background: '#3aa1a8',
                     borderRadius: 5
                 }}/>
                 <div style = {{
