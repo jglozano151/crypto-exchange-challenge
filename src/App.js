@@ -109,10 +109,8 @@ class App extends Component {
       weekly, daily, hourly: [], realTime: []
     })
     if (temp) {
-      console.log('Setting to weekly'); 
       await this.setTime('weekly'); 
       await new Promise(resolve => setTimeout(resolve, 1000)); 
-      console.log('Setting to realtime')
       await this.setTime(temp); 
     }
     else {
